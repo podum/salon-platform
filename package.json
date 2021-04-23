@@ -5,7 +5,7 @@
   "homepage": "https://ionicframework.com/",
   "scripts": {
     "ng": "ng",
-    "start": "ng serve",
+    "start": "npm run build:ssr && npm run serve:ssr",
     "build": "ng build",
     "test": "ng test",
     "lint": "ng lint",
@@ -13,7 +13,8 @@
     "dev:ssr": "ng run app:serve-ssr",
     "serve:ssr": "node dist/app/server/main.js",
     "build:ssr": "ng build --prod && ng run app:server:production",
-    "prerender": "ng run app:prerender"
+    "prerender": "ng run app:prerender",
+    "deploy-prod": "npm run build:ssr && firebase deploy"
   },
   "private": true,
   "dependencies": {
