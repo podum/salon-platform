@@ -13,15 +13,20 @@ export class HomePage implements OnInit {
   ngOnInit() {
     this.title.setTitle('Twitter Card');
     this.meta.addTags([
-      { name: 'twitter:card', content: 'summary' },
-      { name: 'twitter:url', content: '/' },
-      { name: 'twitter:title', content: 'Twitter Card' },
-      { name: 'twitter:description', content: 'Testing twitter card validator' },
-      { name: 'twitter:image', content: 'https://salon-podum.web.app/assets/shapes.svg' },
-      { name: 'og:url', content: '/' },
-      { name: 'og:title', content: 'Twitter Card' },
-      { name: 'og:description', content: 'Testing twitter card validator' },
-      { name: 'og:image', content: 'https://salon-podum.web.app/assets/shapes.svg' }
+      { name: 'title', content: 'Twitter Card' },
+      { name: 'description', content: 'Testing twitter card validator' },
+
+      { property: 'twitter:card', content: 'summary' },
+      { property: 'twitter:title', content: 'Twitter Card' },
+      { property: 'twitter:description', content: 'Testing twitter card validator' },
+      { property: 'twitter:url', content: 'https://salon-podum.web.app/' },
+      { property: 'twitter:image', content: 'https://salon-podum.web.app/assets/shapes.svg' },
+
+      { property: 'og:type', content: 'website' },
+      { property: 'og:title', content: 'Twitter Card' },
+      { property: 'og:description', content: 'Testing twitter card validator' },
+      { property: 'og:url', content: 'https://salon-podum.web.app/' },
+      { property: 'og:image', content: 'https://salon-podum.web.app/assets/shapes.svg' }
     ]);
   }
 
